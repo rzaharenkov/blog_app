@@ -1,5 +1,7 @@
 # README
 
+[![Build Status](https://travis-ci.org/rzaharenkov/blog_app.svg?branch=master)](https://travis-ci.org/rzaharenkov/blog_app)
+
 This is sample Rails app to demonstrate how to use ruby internal in order to optimize caching.
 
 ## Problem
