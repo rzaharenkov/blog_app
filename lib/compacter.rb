@@ -5,7 +5,7 @@
 # Usage:
 #
 #   compacter = Compacter.new(Post.last)
-#   Rails.cache.write('posts:last')
+#   Rails.cache.write('posts:last', compacter)
 #   last_post = Rails.cache.read('posts:last')&.data
 #
 # You can also pass in array of records, or hashes, or multidimensional array, or any other nested structures, e.g:
