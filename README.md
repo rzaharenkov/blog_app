@@ -8,7 +8,7 @@ When you cache data in memcached (I'd assume you use dalli gem) it's usually ser
 
 ## Solution
 
-I don't like to patch ActiveRecord so I have implemented [Compacter](blob/master/lib/compacter.rb) that takes the value you want to serialize (record, array of records, array of hashes of record or any nested structure you like) and serializes only valuable part of it (skips all the redundant metadata).
+I don't like to patch ActiveRecord so I have implemented [Compacter](lib/compacter.rb) that takes the value you want to serialize (record, array of records, array of hashes of record or any nested structure you like) and serializes only valuable part of it (skips all the redundant metadata).
 
 ## Examples
 
@@ -55,4 +55,4 @@ rake compacter:test                     # Tests that compacter does not loose an
 
 - It might work incorrect with different version of Rails (require additional testing);
 - It might work incorrect with [serialized attributes](https://api.rubyonrails.org/classes/ActiveRecord/AttributeMethods/Serialization/ClassMethods.html#method-i-serialize);
-- It relies on ActiveRecord [internals](https://github.com/rzaharenkov/blog_app/blob/master/lib/compacter.rb#L151-L154) (might be a better way);
+- It relies on ActiveRecord [internals](lib/compacter.rb#L151-L154) (might be a better way);
