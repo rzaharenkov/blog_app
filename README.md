@@ -44,7 +44,7 @@ end
 
 ## Testing
 
-I have implemented 2 basic rake tasks to verift how it works:
+I have implemented 2 basic rake tasks to verify how it works:
 
 ```
 rake compacter:stats                    # Measure dump size
