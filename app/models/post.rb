@@ -1,5 +1,3 @@
-require 'compacter'
-
 class Post < ApplicationRecord
   has_many :comments, dependent: :destroy
 
