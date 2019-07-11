@@ -6,6 +6,11 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+def regenerate_posts
+  Post.destroy_all
+  create_posts
+end
+
 def create_posts(count: 10)
   count.times do
     post = Post.create!(title: Faker::Lorem.sentence, body: Faker::Lorem.paragraph(3))
@@ -19,4 +24,4 @@ def create_comments(post, count: 10)
   end
 end
 
-create_posts unless Post.exists?
+regenerate_posts
