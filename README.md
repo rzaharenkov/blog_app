@@ -4,7 +4,7 @@ This is sample Rails app to demonstrate how to use ruby internal in order to opt
 
 ## Problem
 
-When you cache data in memcached (I'd assume you use dalli gem) it's usually serialized with `Marshal.dump / Marshal.load`. This method is good default and it's relyable but it's not optimal. It dumps all the instance variable of any object. In addition to record attributes ActiveRecord stores a lot metadata for each object (e.g. validation errors, dirty state, DB transaction state etc). You don't need all this data in order to instantiate records when loading serialized value from cache.
+When you cache data in memcached (I'd assume you use dalli gem) it's usually serialized with `Marshal.dump / Marshal.load`. This method is good default and it's relyable but it's not optimal. It dumps all the instance variables of any object. In addition to record attributes ActiveRecord stores a lot metadata for each object (e.g. validation errors, dirty state, DB transaction state etc). You don't need all this data in order to instantiate records when loading serialized value from cache.
 
 ## Solution
 
