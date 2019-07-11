@@ -1,0 +1,7 @@
+language: ruby
+rvm:
+ - 2.6
+script:
+- rake db:seed
+- rake compacter:test
+- rake compacter:stats
